@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temeselew Buta - Full Stack Developer</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="min-h-screen flex flex-col items-center justify-start relative">
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <div class="page-transition" id="pageTransition">
+        <div class="zoom-circle"></div>
+        <div class="transition-content" id="transitionText">
+            <span>#</span>
+        </div>
+    </div>
+
+    <div class="custom-cursor">
+        <div class="cursor-dot"></div>
+        <div class="cursor-ring"></div>
+    </div>
+
+    <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+
+    <nav class="mobile-nav" id="mobileNav">
+        <ul class="flex flex-col">
+            <li class="nav-item">
+                <a id="home-link" href="#home" class="flex items-center"><i class="fas fa-home mr-2"></i>Home</a>
+            </li>
+            <li class="nav-item active">
+                <a href="#about" class="flex items-center other-links"><i class="fas fa-user mr-2"></i>About</a>
+            </li>
+            <li class="nav-item">
+                <a href="#contact" class="flex items-center other-links"><i class="fas fa-envelope mr-2"></i>Contact</a>
+            </li>
+            <li class="nav-item">
+                <a href="#projects" class="flex items-center other-links"><i class="fas fa-briefcase mr-2"></i>Projects</a>
+            </li>
+            <li class="nav-item">
+                <a href="https://drive.google.com/file/d/15ANoOX3QnXd8f3QYMS_j70_KaeMqftm3/view?usp=sharing" target="_blank" class="flex items-center other-links"><i class="fas fa-file-alt mr-2"></i>Resume</a>
+            </li>
+        </ul>
+    </nav>
+
+    <header>
+        <nav class="flex items-center justify-center desktop-nav">
+            <div class="nav-container">
+                <ul class="flex justify-center space-x-2">
+                    <li class="nav-item">
+                        <a id="home-link" href="#home" class="flex items-center"><i class="fas fa-home mr-2"></i>Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="#about" class="flex items-center other-links"><i class="fas fa-user mr-2"></i>About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="flex items-center other-links"><i class="fas fa-envelope mr-2"></i>Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#projects" class="flex items-center other-links"><i class="fas fa-briefcase mr-2"></i>Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://drive.google.com/file/d/15ANoOX3QnXd8f3QYMS_j70_KaeMqftm3/view?usp=sharing" target="_blank" class="flex items-center other-links"><i class="fas fa-file-alt mr-2"></i>Resume</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="toggle-container">
+        <label class="toggle-switch">
+            <input type="checkbox" id="theme-toggle">
+            <span class="toggle-slider">
+                <i class="fas fa-moon toggle-icon moon-icon"></i>
+                <i class="fas fa-sun toggle-icon sun-icon"></i>
+            </span>
+        </label>
+    </div>
+
+    <div class="vertical-line-container">
+        <div class="vertical-line"></div>
+        <div class="vertical-text">Temeselew Buta</div>
+    </div>
+
+    <div class="sidebar">
+        <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter twitter-icon"></i></a>
+        <a href="https://t.me/techinsight21" target="_blank"><i class="fab fa-telegram"></i></a>
+        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://tech-insight21" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+    </div>
+
+    <section id="home">
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="floating-shape shape-3"></div>
+        <div class="floating-shape shape-4"></div>
+
+        <div class="asteroid-light"></div>
+        <div class="asteroid-light"></div>
+        <div class="asteroid-light"></div>
+        <div class="asteroid-light"></div>
+        <div class="asteroid-light"></div>
+
+        <div class="text-content">
+            <h1 class="text-4xl font-bold mb-2 slide-up">
+                <p class="text-lg mb-4">Good Afternoon 👋 </p>
+                <div class="name-container">
+                    <span class="first-name">I'm Temeselew</span>
+                    <span class="last-name">Buta</span>
+                </div>
+            </h1>
+            <h3 class="text-2xl mb-4 slide-up slide-up-delay-1">
+                <span class="gradient-subtitle">Full-Stack Web & App Developer</span>
+            </h3>
+            <p class="text-lg mb-6 slide-up slide-up-delay-2">Crafting innovative web solutions with a passion <br>for design and functionality.
+                Let's build something amazing together.
+            </p>
+
+            <div class="button-container">
+                <a href="#projects" class="pro-btn work slide-up slide-up-delay-3">
+                    <i class="fas fa-briefcase btn-icon"></i>
+                </a>
+                <a href="https://t.me/techinsight21" target="_blank" class="pro-btn contact slide-up slide-up-delay-4">
+                    <i class="fab fa-telegram btn-icon"></i>
+                </a>
+                <a href="https://drive.google.com/file/d/15ANoOX3QnXd8f3QYMS_j70_KaeMqftm3/view?usp=sharing" target="_blank" class="pro-btn resume slide-up slide-up-delay-5">
+                    <i class="fas fa-download btn-icon"></i>
+                </a>
+            </div>
+        </div>
+        <div class="image-content">
+            <div class="profile-image-container slide-up slide-up-delay-2">
+                <div class="profile-glow"></div>
+                <img src="/temu.png" alt="Temeselew Buta" class="profile-image">
+                <div class="profile-frame"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="about-container">
+            <div class="mb-16">
+                <div class="flex flex-col lg:flex-row gap-12 items-center">
+                    <div class="lg:w-2/5 flex justify-center">
+                        <div class="relative slide-up">
+                            <img src="/temu.png" alt="Temeselew Buta" class="profile-image floating-element">
+                            <div class="absolute -bottom-4 -right-4 w-24 h-24 rounded-full" style="background: var(--accent-color); opacity: 0.1; z-index: -1;"></div>
+                        </div>
+                    </div>
+                    <div class="lg:w-3/5">
+                        <h2 class="text-3xl font-bold mb-6 section-title slide-up">About Me</h2>
+                        <p class="text-lg mb-6 slide-up slide-up-delay-1">
+                            I'm a web and mobile app developer with a strong focus on creating modern, user-centered designs and smooth functionality. 
+                            I love merging creativity and logic to craft innovative digital solutions that solve real-world problems.
+                        </p>
+                        <p class="text-lg mb-8 slide-up slide-up-delay-2">
+                         
+                             I specialize in building scalable applications that deliver exceptional user experiences 
+                            while maintaining clean, efficient code architecture.
+                        </p>
+
+                        <div class="flex flex-wrap gap-4 mb-8">
+                            <div class="glass-card px-6 py-4 flex-1 min-w-[200px] slide-up slide-up-delay-1">
+                                <div class="text-3xl font-bold mb-2" style="color: var(--accent-color);">5+</div>
+                                <div class="text-sm">Years Experience</div>
+                            </div>
+                            <div class="glass-card px-6 py-4 flex-1 min-w-[200px] slide-up slide-up-delay-2">
+                                <div class="text-3xl font-bold mb-2" style="color: var(--accent-color);">20+</div>
+                                <div class="text-sm">Projects Completed</div>
+                            </div>
+                            <div class="glass-card px-6 py-4 flex-1 min-w-[200px] slide-up slide-up-delay-3">
+                                <div class="text-3xl font-bold mb-2" style="color: var(--accent-color);">98%</div>
+                                <div class="text-sm">Client Satisfaction</div>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <a href="https://drive.google.com/file/d/15ANoOX3QnXd8f3QYMS_j70_KaeMqftm3/view?usp=sharing" target="_blank" class="btn-primary slide-up slide-up-delay-4">
+                                <i class="fas fa-download"></i> Download CV
+                            </a>
+                            <a href="https://t.me/techinsight21" target="_blank" class="btn-outline slide-up slide-up-delay-5">
+                                <i class="fab fa-telegram"></i> Get In Touch
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-16">
+                <h2 class="text-3xl font-bold text-center mb-12 section-title slide-up">Skills & Technologies</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="glass-card p-8 slide-up">
+                        <h3 class="text-xl font-bold mb-6 slide-up">Development</h3>
+                        
+                        <div class="mb-6 slide-up slide-up-delay-1">
+                            <div class="flex justify-between mb-2">
+                                <span>JavaScript / TypeScript</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6 slide-up slide-up-delay-2">
+                            <div class="flex justify-between mb-2">
+                                <span>React & Next.js</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6 slide-up slide-up-delay-3">
+                            <div class="flex justify-between mb-2">
+                                <span>Node.js & Express</span>
+                                <span>88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6 slide-up slide-up-delay-4">
+                            <div class="flex justify-between mb-2">
+                                <span>Python & Django</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-8 slide-up slide-up-delay-1">
+                        <h3 class="text-xl font-bold mb-6 slide-up">Tools & Technologies</h3>
+                        
+                        <div class="mb-6 slide-up slide-up-delay-1">
+                            <div class="flex justify-between mb-2">
+                                <span>Database Design</span>
+                                <span>92%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 92%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6 slide-up slide-up-delay-2">
+                            <div class="flex justify-between mb-2">
+                                <span>UI/UX Design</span>
+                                <span>87%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 87%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6 slide-up slide-up-delay-3">
+                            <div class="flex justify-between mb-2">
+                                <span>DevOps & AWS</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6 slide-up slide-up-delay-4">
+                            <div class="flex justify-between mb-2">
+                                <span>Mobile Development</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                
+            <div class="mb-16">
+                <h2 class="text-3xl font-bold text-center mb-12 section-title slide-up">Tech Stack</h2>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+                    <div class="flex flex-col items-center tech-icon slide-up">
+                        <i class="fab fa-react text-5xl mb-4"></i>
+                        <span>React</span>
+                    </div>
+                    <div class="flex flex-col items-center tech-icon slide-up slide-up-delay-1">
+                        <i class="fab fa-node-js text-5xl mb-4"></i>
+                        <span>Node.js</span>
+                    </div>
+                    <div class="flex flex-col items-center tech-icon slide-up slide-up-delay-2">
+                        <i class="fab fa-python text-5xl mb-4"></i>
+                        <span>Python</span>
+                    </div>
+                    <div class="flex flex-col items-center tech-icon slide-up slide-up-delay-3">
+                        <i class="fab fa-aws text-5xl mb-4"></i>
+                        <span>AWS</span>
+                    </div>
+                    <div class="flex flex-col items-center tech-icon slide-up slide-up-delay-4">
+                        <i class="fas fa-database text-5xl mb-4"></i>
+                        <span>MongoDB</span>
+                    </div>
+                    <div class="flex flex-col items-center tech-icon slide-up slide-up-delay-5">
+                        <i class="fab fa-docker text-5xl mb-4"></i>
+                        <span>Docker</span>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <div class="conversation-section" id="conversation">
+        <div class="conversation-container">
+            <h2 class="text-4xl font-bold mb-6 slide-up">Ready to Start Your Project?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto slide-up slide-up-delay-1">
+                Let's discuss how we can bring your ideas to life with cutting-edge technology and innovative solutions.
+            </p>
+            <a href="https://t.me/techinsight21" target="_blank" class="conversation-btn btn-pulse slide-up slide-up-delay-2">
+                <i class="fab fa-telegram"></i> Start Conversation on Telegram
+            </a>
+        </div>
+    </div>
+
+    <section id="contact">
+        <div class="contact-container">
+            <div class="contact-header">
+                <h2 class="slide-up">Let's Connect & Create!</h2>
+                <p class="slide-up slide-up-delay-1">Hey there! Thanks for stopping by...<br>I'd genuinely love to hear from you.</p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info slide-up">
+                    <h3 class="slide-up">Prefer a different channel?</h3>
+                    <p class="slide-up slide-up-delay-1">Feel free to reach out through any of these platforms:</p>
+
+                    <div class="contact-channels">
+                        <div class="contact-channel slide-up">
+                            <div class="channel-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="channel-text">temeselewbuta21@gmail.com</div>
+                        </div>
+
+                        <div class="contact-channel slide-up slide-up-delay-1">
+                            <div class="channel-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="channel-text">+1 (555) 123-4567</div>
+                        </div>
+
+                        <div class="contact-channel slide-up slide-up-delay-2">
+                            <div class="channel-icon">
+                                <i class="fab fa-telegram"></i>
+                            </div>
+                            <div class="channel-text">@techinsight21</div>
+                        </div>
+
+                        <div class="contact-channel slide-up slide-up-delay-3">
+                            <div class="channel-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </div>
+                            <div class="channel-text">Connect on LinkedIn</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form slide-up slide-up-delay-1">
+                    <h3 class="slide-up">Send Me a Message</h3>
+                    <form id="contactForm" onsubmit="sendEmail(event)">
+                        <div class="form-group slide-up">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                        </div>
+
+                        <div class="form-group slide-up slide-up-delay-1">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                        </div>
+
+                        <div class="form-group slide-up slide-up-delay-2">
+                            <label for="help">How Can I Help?</label>
+                            <input type="text" id="help" name="help" placeholder="Describe how I can assist you" required>
+                        </div>
+
+                        <div class="form-group slide-up slide-up-delay-3">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" placeholder="Write your message here" required></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn slide-up slide-up-delay-4">Send Your Message</button>
+
+                        <p class="privacy-note slide-up slide-up-delay-5">Your privacy matters. I'll only use your information to respond to your message.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="about-container">
+            <h2 class="text-3xl font-bold text-center mb-12 section-title slide-up">My Projects</h2>
+            
+            <div class="projects-grid">
+                <div class="project-card slide-up">
+                    <div class="project-image">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title slide-up">E-Commerce Platform</h3>
+                        <p class="project-description slide-up slide-up-delay-1">
+                            A full-stack e-commerce solution with user authentication, payment processing, and admin dashboard.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag slide-up">React</span>
+                            <span class="tech-tag slide-up slide-up-delay-1">Node.js</span>
+                            <span class="tech-tag slide-up slide-up-delay-2">MongoDB</span>
+                            <span class="tech-tag slide-up slide-up-delay-3">Stripe API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link slide-up">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                            <a href="#" class="project-link slide-up slide-up-delay-1">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card slide-up slide-up-delay-1">
+                    <div class="project-image">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title slide-up">Inventory Management Web</h3>
+                        <p class="project-description slide-up slide-up-delay-1">
+                            A collaborative inventory management application with real-time updates and team collaboration features.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag slide-up">Vue.js</span>
+                            <span class="tech-tag slide-up slide-up-delay-1">Express</span>
+                            <span class="tech-tag slide-up slide-up-delay-2">Socket.io</span>
+                            <span class="tech-tag slide-up slide-up-delay-3">PostgreSQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link slide-up">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                            <a href="#" class="project-link slide-up slide-up-delay-1">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card slide-up slide-up-delay-2">
+                    <div class="project-image">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title slide-up">Analytics Dashboard</h3>
+                        <p class="project-description slide-up slide-up-delay-1">
+                            A comprehensive analytics dashboard with data visualization, reporting, and export capabilities.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag slide-up">React</span>
+                            <span class="tech-tag slide-up slide-up-delay-1">D3.js</span>
+                            <span class="tech-tag slide-up slide-up-delay-2">Python</span>
+                            <span class="tech-tag slide-up slide-up-delay-3">FastAPI</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link slide-up">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                            <a href="#" class="project-link slide-up slide-up-delay-1">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card slide-up slide-up-delay-3">
+                    <div class="project-image">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title slide-up">Mobile Fitness App</h3>
+                        <p class="project-description slide-up slide-up-delay-1">
+                            A cross-platform mobile application for fitness tracking with workout plans and progress monitoring.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag slide-up">React Native</span>
+                            <span class="tech-tag slide-up slide-up-delay-1">Firebase</span>
+                            <span class="tech-tag slide-up slide-up-delay-2">Redux</span>
+                            <span class="tech-tag slide-up slide-up-delay-3">Chart.js</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link slide-up">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                            <a href="#" class="project-link slide-up slide-up-delay-1">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="mt-12 text-center text-gray-500 bg-gray-800 p-4 w-full">
+        <p>&copy; 2025 Temeselew Buta. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
