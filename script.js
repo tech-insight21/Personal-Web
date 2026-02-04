@@ -22,17 +22,17 @@ mobileNavLinks.forEach(link => {
 
 function sendEmail(event) {
     event.preventDefault();
-    
+
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
     const help = document.getElementById('help').value;
     const message = document.getElementById('message').value;
-    
+
     const subject = `New Contact Form Submission from ${name}`;
     const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0AHow I can help: ${help}%0D%0AMessage: ${message}`;
-    
+
     window.location.href = `mailto:temeselewbuta21@gmail.com?subject=${subject}&body=${body}`;
-    
+
     setTimeout(() => {
         alert('Thank you for your message! I will get back to you soon.');
         document.getElementById('contactForm').reset();
@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const targetSection = document.getElementById(sectionId);
         if (targetSection) {
             targetSection.scrollIntoView({ behavior: 'smooth' });
-            
+
             updateActiveNav(sectionId);
         }
     }
@@ -207,7 +207,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const slideUpElements = document.querySelectorAll('.slide-up');
-    
+
     const slideUpObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -248,11 +248,169 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(section);
     });
 
+    const nameToType = "I'm Temeselew";
+    const typingElement = document.getElementById('typing-name');
+    let charIndex = 0;
+
+    function typeName() {
+        if (charIndex < nameToType.length) {
+            typingElement.textContent += nameToType.charAt(charIndex);
+            charIndex++;
+            setTimeout(typeName, 150); // Speed of typing
+        } else {
+            typingElement.classList.add('typing-finished');
+        }
+    }
+
+    if (typingElement) {
+        setTimeout(typeName, 500); // Start delay
+    }
+
+    // Dynamic 3D Tilt for Projects
+    const projectCards = document.querySelectorAll('.project-card');
+    projectCards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+
+            const rotateX = (centerY - y) / 10;
+            const rotateY = (x - centerX) / 10;
+
+            card.style.transform = `perspective(2000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px) scale(1.05)`;
+        });
+
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = `perspective(2000px) rotateX(2deg) rotateY(-15deg) translateY(0) scale(1)`;
+        });
+    });
+
+    // Constant Scroller Logic
+    const scrollToggle = document.getElementById('scrollToggle');
+    if (scrollToggle) {
+        window.addEventListener('scroll', () => {
+            const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+            if (scrollPercent > 50) {
+                scrollToggle.classList.add('up');
+            } else {
+                scrollToggle.classList.remove('up');
+            }
+        });
+
+        scrollToggle.addEventListener('click', () => {
+            if (scrollToggle.classList.contains('up')) {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            } else {
+                window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'smooth' });
+            }
+        });
+    }
+
     if (window.innerWidth <= 768) {
         if (cursor) {
             cursor.style.display = 'none';
         }
         document.body.style.cursor = 'auto';
+    }
+
+    // Antigravity Animation for About Section
+    const canvas = document.getElementById('aboutCanvas');
+    if (canvas) {
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+        const particleCount = 80;
+        const connectionDistance = 150;
+        let mouse = { x: null, y: null, radius: 150 };
+
+        window.addEventListener('mousemove', (e) => {
+            const rect = canvas.getBoundingClientRect();
+            mouse.x = e.clientX - rect.left;
+            mouse.y = e.clientY - rect.top;
+        });
+
+        class Particle {
+            constructor() {
+                this.init();
+            }
+
+            init() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.vx = (Math.random() - 0.5) * 0.5;
+                this.vy = (Math.random() - 0.5) * 0.5;
+                this.size = Math.random() * 2 + 1;
+            }
+
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+
+                if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
+                if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+
+                // Mouse interaction
+                if (mouse.x != null && mouse.y != null) {
+                    let dx = mouse.x - this.x;
+                    let dy = mouse.y - this.y;
+                    let distance = Math.sqrt(dx * dx + dy * dy);
+                    if (distance < mouse.radius) {
+                        const force = (mouse.radius - distance) / mouse.radius;
+                        this.x -= dx * force * 0.02;
+                        this.y -= dy * force * 0.02;
+                    }
+                }
+            }
+
+            draw() {
+                ctx.fillStyle = 'rgba(0, 212, 255, 0.5)';
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        function resizeCanvas() {
+            canvas.width = canvas.offsetWidth;
+            canvas.height = canvas.offsetHeight;
+            particles = [];
+            for (let i = 0; i < particleCount; i++) {
+                particles.push(new Particle());
+            }
+        }
+
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        function animateParticles() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            for (let i = 0; i < particles.length; i++) {
+                particles[i].update();
+                particles[i].draw();
+
+                for (let j = i + 1; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+
+                    if (distance < connectionDistance) {
+                        const opacity = 1 - (distance / connectionDistance);
+                        ctx.strokeStyle = `rgba(0, 212, 255, ${opacity * 0.2})`;
+                        ctx.lineWidth = 1;
+                        ctx.beginPath();
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.stroke();
+                    }
+                }
+            }
+            requestAnimationFrame(animateParticles);
+        }
+
+        animateParticles();
     }
 
     window.addEventListener('load', () => {
