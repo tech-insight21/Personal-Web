@@ -63,24 +63,24 @@
 
     <header>
         <nav class="flex items-center justify-center desktop-nav">
-            <div class="nav-container">
-                <ul class="flex justify-center space-x-2">
-                    <li class="nav-item active">
+            <div class="nav-120-wrapper">
+                <ul class="nav-120-container flex justify-center space-x-2">
+                    <li class="nav-item active" style="--i: 0;">
                         <a id="home-link" href="#home" class="flex items-center"><i
                                 class="fas fa-home mr-2"></i>Home</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" style="--i: 1;">
                         <a href="#about" class="flex items-center other-links"><i class="fas fa-user mr-2"></i>About</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" style="--i: 2;">
                         <a href="#contact" class="flex items-center other-links"><i
                                 class="fas fa-envelope mr-2"></i>Contact</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" style="--i: 3;">
                         <a href="#projects" class="flex items-center other-links"><i
                                 class="fas fa-briefcase mr-2"></i>Projects</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" style="--i: 4;">
                         <a href="https://drive.google.com/file/d/15ANoOX3QnXd8f3QYMS_j70_KaeMqftm3/view?usp=sharing"
                             target="_blank" class="flex items-center other-links"><i
                                 class="fas fa-file-alt mr-2"></i>Resume</a>
@@ -229,94 +229,109 @@
                 </div>
             </div>
 
-            <div class="mb-16">
-                <h2 class="text-3xl font-bold text-center mb-12 section-title slide-up">Skills & Technologies</h2>
+            <div class="mb-24">
+                <h2 class="text-3xl font-bold text-center mb-16 section-title slide-up">Skills & Technologies</h2>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="glass-card p-8 slide-up">
-                        <h3 class="text-xl font-bold mb-6 slide-up">Development</h3>
-
-                        <div class="mb-6 slide-up slide-up-delay-1">
-                            <div class="flex justify-between mb-2">
-                                <span>JavaScript / TypeScript</span>
-                                <span>95%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 95%"></div>
+                <div class="skills-300-wrapper slide-up">
+                    <div class="skills-300-container" style="--total: 10;">
+                        <!-- JavaScript -->
+                        <div class="skill-300-item" style="--i: 0;">
+                            <div class="skill-glass-card">
+                                <i class="fab fa-js skill-300-icon"></i>
+                                <span class="skill-300-name">JavaScript</span>
+                                <div class="skill-300-bar-container">
+                                    <div class="skill-300-bar" style="--percent: 95%;"></div>
+                                </div>
                             </div>
                         </div>
-
-                        <div class="mb-6 slide-up slide-up-delay-2">
-                            <div class="flex justify-between mb-2">
-                                <span>React & Next.js</span>
-                                <span>90%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
-                            </div>
-                        </div>
-
-                        <div class="mb-6 slide-up slide-up-delay-3">
-                            <div class="flex justify-between mb-2">
-                                <span>Node.js & Express</span>
-                                <span>88%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 88%"></div>
+                        <!-- TypeScript -->
+                        <div class="skill-300-item" style="--i: 1;">
+                            <div class="skill-glass-card">
+                                <i class="fas fa-code skill-300-icon"></i>
+                                <span class="skill-300-name">TypeScript</span>
+                                <div class="skill-300-bar-container">
+                                    <div class="skill-300-bar" style="--percent: 90%;"></div>
+                                </div>
                             </div>
                         </div>
-
-                        <div class="mb-6 slide-up slide-up-delay-4">
-                            <div class="flex justify-between mb-2">
-                                <span>Python & Django</span>
-                                <span>85%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="glass-card p-8 slide-up slide-up-delay-1">
-                        <h3 class="text-xl font-bold mb-6 slide-up">Tools & Technologies</h3>
-
-                        <div class="mb-6 slide-up slide-up-delay-1">
-                            <div class="flex justify-between mb-2">
-                                <span>Database Design</span>
-                                <span>92%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 92%"></div>
+                        <!-- React -->
+                        <div class="skill-300-item" style="--i: 2;">
+                            <div class="skill-glass-card">
+                                <i class="fab fa-react skill-300-icon"></i>
+                                <span class="skill-300-name">React & Next.js</span>
+                                <div class="skill-300-bar-container">
+                                    <div class="skill-300-bar" style="--percent: 92%;"></div>
+                                </div>
                             </div>
                         </div>
-
-                        <div class="mb-6 slide-up slide-up-delay-2">
-                            <div class="flex justify-between mb-2">
-                                <span>UI/UX Design</span>
-                                <span>87%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 87%"></div>
-                            </div>
-                        </div>
-
-                        <div class="mb-6 slide-up slide-up-delay-3">
-                            <div class="flex justify-between mb-2">
-                                <span>DevOps & AWS</span>
-                                <span>80%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 80%"></div>
+                        <!-- Node.js -->
+                        <div class="skill-300-item" style="--i: 3;">
+                            <div class="skill-glass-card">
+                                <i class="fab fa-node-js skill-300-icon"></i>
+                                <span class="skill-300-name">Node.js</span>
+                                <div class="skill-300-bar-container">
+                                    <div class="skill-300-bar" style="--percent: 88%;"></div>
+                                </div>
                             </div>
                         </div>
-
-                        <div class="mb-6 slide-up slide-up-delay-4">
-                            <div class="flex justify-between mb-2">
-                                <span>Mobile Development</span>
-                                <span>75%</span>
+                        <!-- Python -->
+                        <div class="skill-300-item" style="--i: 4;">
+                            <div class="skill-glass-card">
+                                <i class="fab fa-python skill-300-icon"></i>
+                                <span class="skill-300-name">Python</span>
+                                <div class="skill-300-bar-container">
+                                    <div class="skill-300-bar" style="--percent: 85%;"></div>
+                                </div>
                             </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 75%"></div>
+                        </div>
+                        <!-- Database -->
+                        <div class="skill-300-item" style="--i: 5;">
+                            <div class="skill-glass-card">
+                                <i class="fas fa-database skill-300-icon"></i>
+                                <span class="skill-300-name">Databases</span>
+                                <div class="skill-300-bar-container">
+                                    <div class="skill-300-bar" style="--percent: 92%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- UI/UX -->
+                        <div class="skill-300-item" style="--i: 6;">
+                            <div class="skill-glass-card">
+                                <i class="fas fa-paint-brush skill-300-icon"></i>
+                                <span class="skill-300-name">UI/UX Design</span>
+                                <div class="skill-300-bar-container">
+                                    <div class="skill-300-bar" style="--percent: 87%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Cloud -->
+                        <div class="skill-300-item" style="--i: 7;">
+                            <div class="skill-glass-card">
+                                <i class="fas fa-cloud skill-300-icon"></i>
+                                <span class="skill-300-name">Cloud & DevOps</span>
+                                <div class="skill-300-bar-container">
+                                    <div class="skill-300-bar" style="--percent: 80%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Mobile -->
+                        <div class="skill-300-item" style="--i: 8;">
+                            <div class="skill-glass-card">
+                                <i class="fas fa-mobile-alt skill-300-icon"></i>
+                                <span class="skill-300-name">App Dev</span>
+                                <div class="skill-300-bar-container">
+                                    <div class="skill-300-bar" style="--percent: 75%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Git/Others -->
+                        <div class="skill-300-item" style="--i: 9;">
+                            <div class="skill-glass-card">
+                                <i class="fab fa-git-alt skill-300-icon"></i>
+                                <span class="skill-300-name">Modern Tools</span>
+                                <div class="skill-300-bar-container">
+                                    <div class="skill-300-bar" style="--percent: 95%;"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -326,30 +341,54 @@
             <div class="mb-16">
                 <h2 class="text-3xl font-bold text-center mb-12 section-title slide-up">Tech Stack</h2>
 
-                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
-                    <div class="flex flex-col items-center tech-icon slide-up">
-                        <i class="fab fa-react text-5xl mb-4"></i>
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 tech-stack-container">
+                    <div class="tech-icon slide-up" style="--delay: 1;">
+                        <i class="fab fa-react"></i>
                         <span>React</span>
                     </div>
-                    <div class="flex flex-col items-center tech-icon slide-up slide-up-delay-1">
-                        <i class="fab fa-node-js text-5xl mb-4"></i>
+                    <div class="tech-icon slide-up" style="--delay: 2;">
+                        <i class="fab fa-node-js"></i>
                         <span>Node.js</span>
                     </div>
-                    <div class="flex flex-col items-center tech-icon slide-up slide-up-delay-2">
-                        <i class="fab fa-python text-5xl mb-4"></i>
+                    <div class="tech-icon slide-up" style="--delay: 3;">
+                        <i class="fab fa-python"></i>
                         <span>Python</span>
                     </div>
-                    <div class="flex flex-col items-center tech-icon slide-up slide-up-delay-3">
-                        <i class="fab fa-aws text-5xl mb-4"></i>
+                    <div class="tech-icon slide-up" style="--delay: 4;">
+                        <i class="fab fa-aws"></i>
                         <span>AWS</span>
                     </div>
-                    <div class="flex flex-col items-center tech-icon slide-up slide-up-delay-4">
-                        <i class="fas fa-database text-5xl mb-4"></i>
+                    <div class="tech-icon slide-up" style="--delay: 5;">
+                        <i class="fas fa-database"></i>
                         <span>MongoDB</span>
                     </div>
-                    <div class="flex flex-col items-center tech-icon slide-up slide-up-delay-5">
-                        <i class="fab fa-docker text-5xl mb-4"></i>
+                    <div class="tech-icon slide-up" style="--delay: 6;">
+                        <i class="fab fa-docker"></i>
                         <span>Docker</span>
+                    </div>
+                    <div class="tech-icon slide-up" style="--delay: 7;">
+                        <i class="fab fa-js"></i>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="tech-icon slide-up" style="--delay: 8;">
+                        <i class="fas fa-code"></i>
+                        <span>TypeScript</span>
+                    </div>
+                    <div class="tech-icon slide-up" style="--delay: 9;">
+                        <i class="fab fa-git-alt"></i>
+                        <span>Git</span>
+                    </div>
+                    <div class="tech-icon slide-up" style="--delay: 10;">
+                        <i class="fab fa-figma"></i>
+                        <span>Figma</span>
+                    </div>
+                    <div class="tech-icon slide-up" style="--delay: 11;">
+                        <i class="fab fa-css3-alt"></i>
+                        <span>Tailwind</span>
+                    </div>
+                    <div class="tech-icon slide-up" style="--delay: 12;">
+                        <i class="fas fa-fire"></i>
+                        <span>Firebase</span>
                     </div>
                 </div>
             </div>

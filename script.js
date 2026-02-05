@@ -243,10 +243,27 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    const skillSections = document.querySelectorAll('.glass-card');
+    const skillSections = document.querySelectorAll('.glass-card, .skills-300-wrapper');
     skillSections.forEach(section => {
         observer.observe(section);
     });
+
+    // Tech Stack Animation Synchronization
+    const techObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const techIcons = entry.target.querySelectorAll('.tech-icon');
+                techIcons.forEach(icon => {
+                    icon.classList.add('active');
+                });
+            }
+        });
+    }, { threshold: 0.2 });
+
+    const techContainer = document.querySelector('.tech-stack-container');
+    if (techContainer) {
+        techObserver.observe(techContainer);
+    }
 
     const nameToType = "I'm Temeselew";
     const typingElement = document.getElementById('typing-name');
