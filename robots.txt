@@ -1,4 +1,1 @@
-User-agent: *
-Allow: /
 
-Sitemap: https://temeselew.netlify.app/sitemap.xml
